@@ -7,7 +7,8 @@
   "scripts": {
     "build": "tsc",
     "lint": "eslint --max-warnings=0 src/",
-    "format": "prettier --write src/"
+    "format": "prettier --write src/",
+    "type-lint": "tsc --noEmit"
   },
   "keywords": [],
   "author": "",
