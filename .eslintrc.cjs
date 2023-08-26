@@ -10,7 +10,7 @@ const config = {
   ],
   plugins: ["@typescript-eslint"],
   parser: "@typescript-eslint/parser",
-  ignorePatterns: ['dist', '.eslintrc.cjs', 'vitest.config.ts'],
+  ignorePatterns: ['dist', '.eslintrc.cjs', 'vitest.config.ts', 'scripts'],
   parserOptions: {
     project: ['./tsconfig.json', './tsconfig.test.json'],
     tsconfigRootDir: __dirname,
