@@ -1,4 +1,4 @@
-import { parseTime } from '../index';
+import { parseTime } from '@/index';
 
 describe('trtime', (): void => {
   describe('parseTime', (): void => {

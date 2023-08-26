@@ -3,7 +3,7 @@
     "target": "ESNext",
     "module": "NodeNext",
     "declaration": true,
-    "moduleResolution": "bundler",
+    "moduleResolution": "node",
     "outDir": "dist",
     "strict": true,
     "esModuleInterop": true,
@@ -14,10 +14,5 @@
     }
   },
   "include": ["src"],
-  "exclude": ["node_modules", "dist", "src/__test__"],
-  "references": [
-    {
-      "path": "./tsconfig.test.json"
-    }
-  ]
+  "exclude": ["node_modules", "dist", "test"]
 }

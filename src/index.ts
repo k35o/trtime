@@ -1,4 +1,4 @@
-import { Formatter } from './type';
+import { Formatter } from '@/type';
 
 const y = 365 * 24 * 60 * 60 * 1000;
 const M = 30 * 24 * 60 * 60 * 1000;
