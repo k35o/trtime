@@ -3,6 +3,14 @@
 treate time.
 It only has the ability to convert numbers to strings.For now.
 
+## install
+
+```
+pnpm i trtime
+```
+
+## usage
+
 ```ts
 parseTime(
   333333333333,
