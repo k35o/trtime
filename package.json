@@ -1,6 +1,6 @@
 {
   "name": "trtime",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "",
   "main": "./dist/index.js",
   "types": "dist/index.d.ts",
@@ -10,7 +10,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "rm -rf dist/ && esbuild src/index.ts --bundle --minify --outfile=dist/index.js && tsc -emitDeclarationOnly --declaration",
+    "build": "rm -rf dist/ && esbuild src/index.ts --bundle --outfile=dist/index.js --format=esm && tsc -emitDeclarationOnly --declaration",
     "prepare": "pnpm run build",
     "lint": "eslint --max-warnings=0 src/",
     "format": "prettier --write src/",
