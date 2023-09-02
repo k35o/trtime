@@ -2,23 +2,37 @@
   "name": "trtime",
   "version": "1.0.4",
   "description": "",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
   "main": "./dist/index.js",
-  "types": "dist/index.d.ts",
+  "types": "./dist/index.d.ts",
   "type": "module",
   "license": "MIT",
   "files": [
     "dist"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/k35o/trtime.git"
+  },
+  "keywords": [],
+  "author": "k35o",
   "scripts": {
-    "build": "rm -rf dist/ && esbuild src/index.ts --bundle --outfile=dist/index.js --format=esm && tsc -emitDeclarationOnly --declaration",
+    "build": "rm -rf dist/ && pnpm run build:esm && pnpm run build:cjs && pnpm run build:type",
+    "build:esm": "esbuild src/index.ts --bundle --minify --outfile=dist/index.js --format=esm",
+    "build:cjs": "esbuild src/index.ts --bundle --minify --outfile=dist/index.cjs --format=cjs",
+    "build:type": "tsc -emitDeclarationOnly --declaration",
     "prepare": "pnpm run build",
     "lint": "eslint --max-warnings=0 src/",
     "format": "prettier --write src/",
     "type-lint": "tsc --noEmit",
     "test": "vitest"
   },
-  "keywords": [],
-  "author": "k35o",
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^6.4.0",
     "@typescript-eslint/parser": "^6.4.0",
